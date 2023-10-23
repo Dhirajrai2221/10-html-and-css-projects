@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --bg-cl-1: #270082;
+  --bg-cl-2: #281154;
+  --bg-linear: linear-gradient(
+    2deg,
+    rgba(0, 0, 0, 0.5) 0.68%,
+    rgba(0, 0, 0, 0) 82.95%
+  );
+  --bright-red: #dc0000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bg-cl-1);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  color: var(--white);
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.nav-lists {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-lists li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.hero-section {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-linear), url(./asset/hero-bg-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section div {
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 7.2rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.hero-section p:nth-of-type(1) {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.hero-section p:nth-of-type(2) {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.music-section {
+  width: 100%;
+  height: 76rem;
+  background-color: var(--bg-cl-2);
+  color: var(--white);
+  padding-top: 3.8rem;
+  text-align: center;
+}
+
+.music-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.music-section h2 {
+  font-size: 3.6rem;
+}
+
+.music-section p:nth-of-type(1) {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3.8rem;
+}
+
+.music-section p:nth-of-type(2) {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--bright-red);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.music-section p:nth-of-type(3) {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.feature-section {
+  text-align: center;
+}
+
+.feature-section img:nth-of-type(1) {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: -38rem;
+  margin-bottom: 8rem;
+}
+
+.feature-section h3 {
+  font-size: 2.4rem;
+  font-size: 600;
+  margin-bottom: 4rem;
+}
+
+.feature-section p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+}
+
+.feature-section a {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--bg-cl-1);
+  transition: all .3s
+}
+
+.feature-section a:hover  {
+ transform: scale(1.25) rotate(12deg);
+}
+
+.feature-section a:active {
+    transform: scale(0.85) rotate(0deg);
+    background-color: var(--bg-cl-2);
+}
+
+.feature-section img:nth-of-type(2) {
+  display: block;
+  max-width: 100%;
+  margin: 5rem auto;
+}
