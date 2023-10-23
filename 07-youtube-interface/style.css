@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --cl-1: #e1e1e1;
+  --cl-2: #ebebeb;
+  --cl-3: #a7a7a7;
+  --cl-4: #eee;
+  --cl-5: #e2e2e2;
+  --cl-6: #484848;
+  --bright-red: #ff0000;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 6.8rem 1fr;
+  grid-template-rows: 11.3rem 1fr;
+}
+
+header {
+    background-color: lightsalmon;
+    grid-column: 2 / -1;
+}
+
+aside {
+  background-color: lightblue;
+  grid-row: 1 / -1;
+}
+
+main {
+  background-color: lightseagreen;
+}
