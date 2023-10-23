@@ -1,0 +1,163 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --bg-black-1: #161619;
+  --bg-cl-1: #515603;
+  --bg-cl-2: #722300;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./asset/hero-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 7.2rem;
+  color: var(--white);
+  font-weight: 400;
+  margin-left: 20rem;
+}
+
+h1 span:first-child {
+  font-size: 3.6rem;
+}
+
+.work-section {
+  background-color: var(--bg-black-1);
+  color: var(--white);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.work-section h2 {
+  font-size: 7.2rem;
+}
+
+.work-section h2 span {
+  font-size: 14.4rem;
+}
+
+.feature-section {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+  /* display: flex;
+  gap: 5.4rem; */
+  display: flex;
+  /* gap: 5.4rem; */
+  justify-content: space-evenly;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  overflow: hidden;
+  color: var(--black);
+  max-width: 32rem;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+}
+
+.card h3 {
+  font-size: 2.4rem;
+}
+
+.card p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.card-bottom {
+  padding: 2.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.details-section {
+  display: flex;
+  color: var(--white);
+}
+
+.details-section h3 {
+  font-size: 6.4rem;
+  margin-bottom: 1.4rem;
+  font-weight: 400;
+}
+
+.details-section p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  background-color: var(--bg-cl-1);
+}
+
+.contact a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.about {
+  background-color: var(--bg-cl-2);
+}
+
+.contact,
+.about {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.contact div,
+.about div {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    height: 13.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    text-align: center;
+    font-size: 2.4rem;
+    text-decoration: uppercase;
+}
