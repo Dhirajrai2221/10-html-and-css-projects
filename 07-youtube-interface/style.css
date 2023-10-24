@@ -1,10 +1,7 @@
-
-
 /* Challange  */
-/* Use only gird for each and every layout  */
-/* create layout with grid only */
-/* no use of flexbox */
-
+/* Use  gird for each and every layout  */
+/* create layout with grid  */
+/* only use flex for header section*/
 
 *,
 *::after,
@@ -12,6 +9,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 :root {
@@ -23,6 +29,10 @@
   --cl-4: #eee;
   --cl-5: #e2e2e2;
   --cl-6: #484848;
+  --cl-7: #f2f2f2;
+  --cl-8: #e2e2e2;
+  --cl-9: #eee;
+  --cl-10: #e5e5e5;
   --bright-red: #ff0000;
 }
 
@@ -32,24 +42,206 @@ html {
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
   display: grid;
+  grid-template-areas:
+    "aside header"
+    "aside main";
   grid-template-columns: 6.8rem 1fr;
-  grid-template-rows: 11.3rem 1fr;
+  grid-template-rows: 11.2rem 1fr;
 }
 
 header {
-    background-color: lightsalmon;
-    grid-column: 2 / -1;
+  background-color: var(--white);
+  grid-area: header;
 }
 
 aside {
-  background-color: lightblue;
-  grid-row: 1 / -1;
+  /* padding: 2rem; */
+  background-color: var(--white);
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+aside > * {
+  margin: 0 auto;
 }
 
 main {
   background-color: lightseagreen;
+  grid-template-areas: main;
+  padding: 2.8rem;
+  background-color: var(--cl-9);
+}
+
+/* aside bar */
+
+.hamburger-menu {
+  margin-top: 2rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s ease-out;
+}
+
+.hamburger-menu:hover::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-color: var(--cl-7);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aside-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+}
+
+.aside-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* background-color: lightblue; */
+  padding: 2rem 0;
+  transition: all 0.3s ease-out;
+}
+
+.aside-item:hover {
+  background-color: var(--cl-7);
+  border-radius: 0.6rem;
+}
+
+.aside-item p {
+  font-size: 1rem;
+}
+
+/* Header  */
+
+nav {
+  display: flex;
+  gap: 8rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem 0 0.6rem;
+  /* background-color: lightblue; */
+  height: 6.6rem;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--cl-8);
+}
+
+.logo img {
+  display: block;
+}
+
+.search-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  height: 3.8rem;
+}
+
+.search-bar input {
+  border: 1px solid var(--cl-1);
+  /* padding: 1rem; */
+  min-width: calc(58rem - 6.5rem);
+  padding-left: 1rem;
+  font-size: 1.6rem;
+}
+
+.search-bar input::placeholder {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-logo {
+  background-color: var(--cl-1);
+  display: block;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-logo img {
+  height: 2.8rem;
+}
+
+.voice-bar {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--cl-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice-bar img {
+  display: block;
+}
+
+.header-right-section {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.recomdation-section {
+  padding: 0 5rem 0 0.6rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  /* background-color: lightblue; */
+  height: calc(100% - 6.7rem);
+}
+
+.recomdation-section li a {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--black);
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--cl-3);
+  border-radius: 10rem;
+  background-color: var(--cl-9);
+}
+
+.recomdation-section li a:hover:not(.recomdation-section li:first-child a) {
+  background-color: var(--cl-10);
+}
+
+.recomdation-section li:first-child a {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+
+/* main */
+
+.videos-section {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  columns: 1.6rem;
+  row-gap: 2.4rem;
 }
