@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
@@ -75,7 +75,7 @@ aside > * {
 main {
   background-color: lightseagreen;
   grid-template-areas: main;
-  padding: 2.8rem;
+  padding: 3.2rem 2rem;
   background-color: var(--cl-9);
 }
 
@@ -208,7 +208,7 @@ nav {
 }
 
 .recomdation-section {
-  padding: 0 5rem 0 0.6rem;
+  padding: 0 5rem 0 2rem;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -239,9 +239,62 @@ nav {
 
 /* main */
 
-.videos-section {
+.yt-videos-section {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  columns: 1.6rem;
+  /* grid-template-columns: repeat(4,1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  column-gap: 1.6rem;
   row-gap: 2.4rem;
+}
+
+
+.yt-videos-container{
+
+}
+
+.yt-thumbnail {
+ margin-bottom: .8rem;
+}
+
+.yt-thumbnail img{
+  display: block;
+  max-width: 100%;
+}
+
+.yt-video-dets{
+  display: grid;
+  grid-template-columns: 4rem 1fr 2.4rem;
+  gap: 1rem;
+}
+
+.yt-profile-channel{
+
+}
+
+.yt-profile-channel img {
+  display: block;
+}
+
+.yt-title-container {
+
+}
+
+.yt-title-container h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.yt-channel-name {
+  color: var(--cl-6);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.yt-view-date-container {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.yt-view-date-container span:first-child {
+  margin-right: .6rem;
 }
