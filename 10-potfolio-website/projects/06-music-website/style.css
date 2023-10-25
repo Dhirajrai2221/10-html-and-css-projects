@@ -1,0 +1,370 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --bg-cl-1: #270082;
+  --bg-cl-2: #281154;
+  --bg-cl-3: #1b0058;
+  --bg-linear: linear-gradient(
+    2deg,
+    rgba(0, 0, 0, 0.5) 0.68%,
+    rgba(0, 0, 0, 0) 82.95%
+  );
+  --bg-linear-2: linear-gradient(
+    175deg,
+    rgba(3, 0, 12, 0.67) 8.36%,
+    rgba(34, 16, 89, 0.67) 95.78%
+  );
+
+  --bright-red: #dc0000;
+
+  --divider-cl: #9e9e9e;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 124rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bg-cl-1);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  color: var(--white);
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.nav-lists {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-lists li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.nav-lists li a:hover {
+  outline: 3px solid var(--white);
+}
+
+.hero-section {
+  margin-top: 6rem;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-linear), url(./asset/hero-bg-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section div {
+  text-align: center;
+}
+
+.heading-primary {
+  font-size: 7.2rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.hero-section p:nth-of-type(1) {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.hero-section p:nth-of-type(2) {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.music-section {
+  width: 100%;
+  height: 76rem;
+  background-color: var(--bg-cl-2);
+  color: var(--white);
+  padding-top: 3.8rem;
+  text-align: center;
+}
+
+.music-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.music-section h2 {
+  font-size: 3.6rem;
+}
+
+.music-section p:nth-of-type(1) {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 3.8rem;
+}
+
+.music-section p:nth-of-type(2) {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: var(--bright-red);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.4rem;
+  margin-bottom: 3rem;
+  transition: all .3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(220, 0, 0, 0.3);
+}
+
+.cta-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 .5rem 1rem rgba(220, 0, 0, 0.2);
+}
+
+.music-section p:nth-of-type(3) {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.feature-section {
+  text-align: center;
+}
+
+.feature-section img:nth-of-type(1) {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: -38rem;
+  margin-bottom: 8rem;
+}
+
+.feature-section h3 {
+  font-size: 2.4rem;
+  font-size: 600;
+  margin-bottom: 4rem;
+}
+
+.feature-section p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+}
+
+.feature-section a {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--bg-cl-1);
+  transition: all 0.3s;
+}
+
+.feature-section a:hover {
+  transform: scale(1.25) rotate(12deg);
+}
+
+.feature-section a:active {
+  transform: scale(0.85) rotate(0deg);
+  background-color: var(--bg-cl-2);
+}
+
+.feature-section img:nth-of-type(2) {
+  display: block;
+  max-width: 100%;
+  margin: 5rem auto 6rem;
+}
+
+.feature-section-2 {
+  background: var(--bg-linear-2), url(./asset/img-2.png);
+  height: 70rem;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.feature-section-2 h3 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.feature-section-2 p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.gift-card-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8rem 0;
+}
+
+.gift-card-img {
+  justify-self: center;
+}
+
+.gift-card-img img {
+  display: block;
+  max-width: 100%;
+}
+
+.gift-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.gift-card-content h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.gift-card-content p {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider-cl);
+}
+
+.cta-btn-2 {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: inline-block;
+  background-color: var(--bg-cl-1);
+  padding: 0.6rem 2.4rem;
+  align-self: flex-start;
+}
+
+.cta-btn-2:hover {
+  background-color: var(--bg-cl-2);
+}
+
+.footer {
+  background-color: var(--bg-cl-3);
+  padding: 5rem 0;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+  color: var(--white);
+}
+
+.footer-links h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.footer-links .underline {
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.footer-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer-list ul a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.2rem;
+  transition: all 0.3s;
+}
+
+.footer-list ul a:hover {
+  background-color: var(--bg-cl-1);
+  transform: scale(1.25) rotate(12deg);
+}
+
+.footer-end {
+  background-color: var(--bg-cl-1);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-end p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--white);
+}

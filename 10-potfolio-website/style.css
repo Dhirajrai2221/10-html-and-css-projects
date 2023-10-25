@@ -161,28 +161,31 @@ nav ul li a {
   transform: translatey(400px);
 }
 
+.card:hover::after {
+  transform: translate(0px);
+}
+
 .card::before {
-  content: "Visit";
+  content: "Do Visit";
   position: absolute;
   color: var(--white);
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
-  background-color: var(--cl-1);
+  background-color: var(--hd-cl);
   padding: 1rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  visibility:hidden ;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
 }
 
-.card:hover::after {
-  transform: translate(0px);
-}
-
-.card:hover::before{
-    transform: scale(1);
-    visibility: visible;
+.card:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
 }
 
 .card img {
@@ -219,8 +222,21 @@ nav ul li a {
 
 .contact-dets div {
   display: flex;
+  padding: 0.4rem;
   gap: 0.8rem;
   align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.contact-dets div:hover {
+  transform: scale(1.25) rotate(12deg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.contact-dets div:active {
+  transform: scale(.8) rotate(-12deg);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 footer {
