@@ -70,6 +70,23 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: currentColor;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: var(--accent-cl);
+  bottom: -2px;
+  left: 0;
+  border-radius: 10rem;
+  transition: all .3s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
 }
 
 .hero-section {
