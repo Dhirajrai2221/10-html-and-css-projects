@@ -1,0 +1,237 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --hd-cl: #0089b7;
+  --accent-cl: #fdff9e;
+  --dv-cl: #00668f;
+  --cl-1: #003d62;
+  --cl-2: #003251;
+  --cl-3: #003d62;
+  --cl-4: #012941;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  color: var(--white);
+}
+
+.container {
+  max-width: 116rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--hd-cl);
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+nav {
+  min-height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3.6rem;
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 800;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.hero-section {
+  margin-top: 8rem;
+  padding: 6rem 0;
+  background-color: var(--cl-1);
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* .hero-img {
+
+} */
+
+.hero-img img {
+  display: block;
+  max-width: 100%;
+  border-radius: 999rem;
+}
+
+.heading-primary span:first-child {
+  font-size: 7.2rem;
+  color: var(--accent-cl);
+}
+
+.heading-primary span:nth-child(2) {
+  font-size: 3.6rem;
+}
+
+.heading-primary span:nth-child(3) {
+  font-size: 6.4rem;
+}
+
+.divider {
+  width: 100%;
+  height: 6px;
+  background-color: var(--dv-cl);
+}
+
+.project-section {
+  background-color: var(--cl-2);
+  padding: 10rem 12rem;
+}
+
+.heading-secondary {
+  font-size: 7.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.project-cards {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  transition: all 0.4s;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translatey(400px);
+}
+
+.card::before {
+  content: "Visit";
+  position: absolute;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: var(--cl-1);
+  padding: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  visibility:hidden ;
+}
+
+.card:hover::after {
+  transform: translate(0px);
+}
+
+.card:hover::before{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+}
+
+.contact-section {
+  padding: 15rem 0 18rem 0;
+  background-color: var(--cl-3);
+}
+
+.heading-tertiary {
+  font-size: 7.2rem;
+  font-weight: 700;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.contact-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.contact-dets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4.6rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.contact-dets div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+footer {
+  min-height: 12rem;
+  background-color: var(--cl-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
